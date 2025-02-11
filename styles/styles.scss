@@ -103,7 +103,7 @@ body {
   width: 100%;
 }
 
-h1, h2, p {
+h1, h2, h3, p {
   margin: 0;
 }
 
@@ -149,6 +149,31 @@ h1, h2, p {
   height: $horizontal-line-height;
 }
 
+.cardContentList {
+  display: flex;
+  flex-direction: column;
+  row-gap: $space-8px;
+}
+
+.cardContentTable {
+  display: flex;
+  flex-direction: column;
+  row-gap: $space-12px;
+}
+
+.cardContentTableRecord {
+  margin-left: $space-32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: $space-16px;
+}
+
+.cardContentTableRecordValue {
+  color: $color-brown-800;
+
+  @include text-preset-4-bold;
+}
+
 .cardContentTitle {
   color: $color-stone-900;
 
@@ -160,12 +185,6 @@ h1, h2, p {
   display: flex;
   flex-direction: column;
   row-gap: $space-16px;
-}
-
-.cardContentPreparationList {
-  display: flex;
-  flex-direction: column;
-  row-gap: $space-8px;
 }
 
 .cardContentPreparationTitle {
