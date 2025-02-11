@@ -14,8 +14,6 @@ $space-48px: functions.to-rem(48px);
 $space-40px: functions.to-rem(40px);
 $space-32px: functions.to-rem(32px);
 $space-24px: functions.to-rem(24px);
-$space-21px: functions.to-rem(21px);
-$space-19px: functions.to-rem(19px);
 $space-16px: functions.to-rem(16px);
 $space-12px: functions.to-rem(12px);
 $space-8px: functions.to-rem(8px);
@@ -101,20 +99,14 @@ $phone-width: 600px;
 body {
   margin: 0;
   background-color: $color-stone-100;
-  padding: $space-128px $space-48px;
   height: 100%;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @include phone {
-    padding: 0;
-  }
 }
 
-h1, h2, h3, hr, p {
+h1, h2, hr, p {
   margin: 0;
 }
 
@@ -124,19 +116,22 @@ ol, ul {
 }
 
 #app {
+  padding: $space-128px $space-48px;
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+
+  @include phone {
+    padding: 0;
+  }
 }
 
 .attribution {
   font-size: 11px;
   text-align: center;
-  position: fixed;
-  bottom:  0;
-  z-index: 2;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
@@ -186,14 +181,14 @@ ol, ul {
 }
 
 .cardContentList {
-  padding-left: $space-21px;
+  padding-left: $space-24px;
   display: flex;
   flex-direction: column;
   row-gap: $space-8px;
 }
 
 .cardContentListItem {
-  margin-left: $space-19px;
+  margin-left: $space-16px;
   display: block;
 }
 
