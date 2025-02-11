@@ -1,0 +1,17 @@
+/* Error: calc(8px * 1rem) isn't a valid CSS value.
+ *     ,
+ * 100 |   padding: $space-128px $space-48px;
+ *     |            ^^^^^^^^^^^^^^^^^^^^^^^^
+ *     '
+ *   styles.scss 100:12  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: calc(8px * 1rem) isn't a valid CSS value.\a     \2577 \a 100 \2502    padding: $space-128px $space-48px;\a     \2502             ^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   styles.scss 100:12  root stylesheet";
+}

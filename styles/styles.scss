@@ -1,0 +1,126 @@
+@use 'functions';
+
+$color-rose-800: #7A284E;
+$color-rose-50: #FFF7FB;
+$color-stone-900: #312E2C;
+$color-stone-600: #5F564D;
+$color-stone-150: #E3DDD7;
+$color-stone-100: #F3E5D7;
+$color-brown-800: #854632;
+$color-white: #FFFFFF;
+
+$space-128px: functions.to-rem(128px);
+$space-48px: functions.to-rem(48px);
+$space-40px: functions.to-rem(40px);
+$space-32px: functions.to-rem(32px);
+$space-24px: functions.to-rem(24px);
+$space-16px: functions.to-rem(16px);
+$space-12px: functions.to-rem(12px);
+$space-8px: functions.to-rem(8px);
+
+$radius-24px: functions.to-rem(24px);
+$radius-12px: functions.to-rem(12px);
+
+$max-content-width: functions.to-rem(736px);
+
+$phone-width: 600px;
+
+:root {
+  @font-face {
+    font-family: 'Outfit';
+    src: url('../assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'YoungSerif';
+    src: url('../assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+    font-weight: 400 600;
+    font-style: normal;
+  }
+}
+
+@mixin phone {
+  @media (max-width: $phone-width) {
+    @content
+  }
+}
+
+@mixin text-preset-1 {
+  font-family: YoungSerif,serif;
+  font-weight: 400;
+  font-size: functions.to-rem(40px);
+  line-height: 100%;
+  letter-spacing: 0;
+
+  @include phone {
+    font-size: functions.to-rem(36px);
+  }
+}
+
+@mixin text-preset-2 {
+  font-family: YoungSerif,serif;
+  font-weight: 400;
+  font-size: functions.to-rem(28px);
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-3 {
+  font-family: YoungSerif,serif;
+  font-weight: 600;
+  font-size: functions.to-rem(20px);
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4 {
+  font-family: YoungSerif,serif;
+  font-weight: 400;
+  font-size: functions.to-rem(16px);
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+@mixin text-preset-4-bold {
+  font-family: YoungSerif,serif;
+  font-weight: 700;
+  font-size: functions.to-rem(16px);
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color-stone-100;
+  padding: $space-128px $space-48px;
+  height: 100%;
+  width: 100%;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom:  0;
+  z-index: 2;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
