@@ -15,11 +15,11 @@
   }
 
   @if $unit == "px" {
-    @return calc($value / 16) * 1rem;
+    @return math.div($value, 16px) * 1rem;
   }
 
   @if $unit == "%" {
-    @return calc($value / 100) * 1rem;
+    @return math.div($value, 100%) * 1rem;
   }
 
   @if $unit == "rem" {

@@ -1,17 +1,145 @@
-/* Error: calc(8px * 1rem) isn't a valid CSS value.
- *     ,
- * 100 |   padding: $space-128px $space-48px;
- *     |            ^^^^^^^^^^^^^^^^^^^^^^^^
- *     '
- *   styles.scss 100:12  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: calc(8px * 1rem) isn't a valid CSS value.\a     \2577 \a 100 \2502    padding: $space-128px $space-48px;\a     \2502             ^^^^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   styles.scss 100:12  root stylesheet";
+@font-face {
+  font-family: "Outfit";
+  src: url("../assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
 }
+@font-face {
+  font-family: "YoungSerif";
+  src: url("../assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+  font-weight: 400 600;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F3E5D7;
+  padding: 8rem 3rem;
+  height: 100%;
+  width: 100%;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.card {
+  border-radius: 1.5rem;
+  background-color: #FFFFFF;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 46rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+
+.cardContentLine {
+  border: 0;
+  background-color: #E3DDD7;
+  height: 1px;
+}
+
+.cardContentTitle {
+  color: #312E2C;
+  font-family: YoungSerif, serif;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+@media (max-width: 600px) {
+  .cardContentTitle {
+    font-size: 2.25rem;
+  }
+}
+
+.cardContentPreparation {
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.cardContentPreparationList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.cardContentPreparationTitle {
+  color: #7A284E;
+  font-family: YoungSerif, serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.cardContentStructure {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.cardContentTextDefault {
+  color: #5F564D;
+  font-family: YoungSerif, serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  letter-spacing: 0;
+}
+
+.cardContentTitleDefault {
+  color: #854632;
+  font-family: YoungSerif, serif;
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.cardImage {
+  border-radius: 0.75rem;
+  height: 18.75rem;
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 600px) {
+  .cardImage {
+    height: auto;
+    object-fit: fill;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

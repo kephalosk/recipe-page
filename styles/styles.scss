@@ -21,8 +21,9 @@ $space-8px: functions.to-rem(8px);
 $radius-24px: functions.to-rem(24px);
 $radius-12px: functions.to-rem(12px);
 
+$horizontal-line-height: 1px;
 $max-content-width: functions.to-rem(736px);
-
+$max-image-height: functions.to-rem(300px);
 $phone-width: 600px;
 
 :root {
@@ -123,4 +124,82 @@ h1, h2, p {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.card {
+  border-radius: $radius-24px;
+  background-color: $color-white;
+  padding: $space-40px;
+  width: 100%;
+  max-width: $max-content-width;
+  display: flex;
+  flex-direction: column;
+  row-gap: $space-40px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  row-gap: $space-32px;
+}
+
+.cardContentLine {
+  border: 0;
+  background-color: $color-stone-150;
+  height: $horizontal-line-height;
+}
+
+.cardContentTitle {
+  color: $color-stone-900;
+
+  @include text-preset-1;
+}
+
+.cardContentPreparation {
+  border-radius: $radius-12px;
+  display: flex;
+  flex-direction: column;
+  row-gap: $space-16px;
+}
+
+.cardContentPreparationList {
+  display: flex;
+  flex-direction: column;
+  row-gap: $space-8px;
+}
+
+.cardContentPreparationTitle {
+  color: $color-rose-800;
+
+  @include text-preset-3;
+}
+
+.cardContentStructure {
+  display: flex;
+  flex-direction: column;
+  row-gap: $space-24px;
+}
+
+.cardContentTextDefault {
+  color: $color-stone-600;
+
+  @include text-preset-4;
+}
+
+.cardContentTitleDefault {
+  color: $color-brown-800;
+
+  @include text-preset-2;
+}
+
+.cardImage {
+  border-radius: $radius-12px;
+  height: $max-image-height;
+  width: 100%;
+  object-fit: cover;
+
+  @include phone {
+    height: auto;
+    object-fit: fill;
+  }
 }
